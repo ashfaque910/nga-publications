@@ -1,41 +1,76 @@
 .common-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #fff;
-  }
-  
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.common-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+/* Study Material and Test Series Cards */
+.common-study-material,
+.common-test-series {
+  width: 40%;
+  padding: 30px;
+  margin: 20px;
+  background-color: #622c5440;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 15px 0;
+}
+
+.study-material-image,
+.test-series-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.common-study-material:hover, 
+.common-test-series:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .common-content {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    width: 100%;
+    flex-direction: column;
+    align-items: center; /* Center align the items on smaller screens */
   }
-  
+
   .common-study-material,
   .common-test-series {
-    width: 40%;
-    padding: 30px ;
-    margin: 20px;
-    background-color: #622c5440;/*#dc1c1c40*/
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border-radius:'15px 0';
+    width: 90%; /* Take almost the full width on smaller screens */
+    margin: 10px 0;
   }
-  
-  .study-material-image,
-  .test-series-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-  } 
-  
-  .common-study-material:hover, .common-test-series:hover {
-    transform: scale(1.02);
-    /* border-radius:'15px 0'; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  /* For extra small devices like iPhones */
+  .common-study-material,
+  .common-test-series {
+    width: 100%; /* Full width for small screens */
+    padding: 20px;
+    margin: 10px 0;
   }
-  
+
+  .common-study-material h1,
+  .common-test-series h1 {
+    font-size: 1.8rem; /* Adjust font size */
+  }
+
+  .common-study-material p,
+  .common-test-series p {
+    font-size: 1rem; /* Adjust font size */
+  }
+}  
   /* Typography */
   /* h1 {
     font-family: 'Poppins', sans-serif; /* Add Google Fonts link to your HTML */
