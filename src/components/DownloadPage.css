@@ -1,0 +1,55 @@
+@import './CommonPage.css'; /* Assuming the CommonPage.css contains global styles */
+
+/* Layout for the download page */
+.download-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: var(--bg-color, #f9f9f9); /* Background matches theme color */
+  padding: 20px;
+}
+
+/* Container for the download content */
+.download-container {
+  background: var(--secondary-color); /* Card background matches theme */
+  border: 1px solid var(--border-color, #ddd);
+  padding: 40px;
+  border-radius: var(--border-radius, 15px); /* Use the theme's border-radius */
+  text-align: center;
+  box-shadow: var(--box-shadow, 0 4px 15px rgba(0, 0, 0, 0.1)); /* Theming the shadow */
+  max-width: 500px; /* Ensure it’s not too wide for mobile */
+  width: 100%;
+}
+
+/* Title styling matches theme */
+.download-title {
+  font-size: 2rem;
+  color: var(--primary-color, #2E6982); /* Use primary color from the theme */
+  margin-bottom: 20px;
+  font-family: var(--font-family-heading, 'Roboto', sans-serif); /* Use theme font */
+}
+
+/* Description styling */
+.download-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: var(--text-color, #666); /* Text color matches theme */
+  font-family: var(--font-family-body, 'Roboto', sans-serif); /* Body font */
+}
+
+/* Download button that matches the theme */
+.download-button {
+  padding: 15px 30px;
+  background-color: var(--button-bg, #286982); /* Button background color matches theme */
+  color: var(--button-text-color, white);
+  font-size: 1rem;
+  border-radius: var(--button-radius, 5px);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: var(--button-hover-bg, #155ab2); /* Hover effect aligned with theme */
+}

@@ -6,6 +6,7 @@ import NeetPage from "./components/NeetPage"; // NeetPage component
 import Jee from "./components/Jee"; // Jee component
 import Kcet from "./components/Kcet"; // Kcet component
 import Foundation from "./components/Foundation";
+import DownloadPage from "./components/DownloadPage"
 import Blogs from "./components/Blogs";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -26,24 +27,17 @@ const App = () => {
           <Route path="/" element={<HomeSection />} />
           {/* NEET Routes */}
           <Route path="/neet" element={<NeetPage />} />
-          <Route path="/neet/study-material" element={<StudyMaterial title="NEET Study Material" />} />
-          <Route path="/neet/test-series" element={<TestSeries title="NEET Test Series" />} />
-
+          <Route path="/download/:file" element={<DownloadPage />} />
+         
           {/* JEE Routes */}
           <Route path="/jee" element={<Jee />} />
-          <Route path="/jee/study-material" element={<StudyMaterial title="JEE Study Material" />} />
-          <Route path="/jee/test-series" element={<TestSeries title="JEE Test Series" />} />
-
+          
           {/* KCET Routes */}
           <Route path="/kcet" element={<Kcet />} />
-          <Route path="/kcet/study-material" element={<StudyMaterial title="KCET Study Material" />} />
-          <Route path="/kcet/test-series" element={<TestSeries title="KCET Test Series" />} />
-
+         
           {/* Foundation Routes */}
           <Route path="/foundation" element={<Foundation />} />
-          <Route path="/foundation/study-material" element={<StudyMaterial title="Foundation Study Material" />} />
-          <Route path="/foundation/test-series" element={<TestSeries title="Foundation Test Series" />} />
-
+    
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

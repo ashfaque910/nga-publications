@@ -1,33 +1,37 @@
-// components/JeePage.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import StudyMaterial from "./common/StudyMaterial";
 import TestSeries from "./common/TestSeries";
-import "./CommonPage.css"; // Optional CSS
+import "./CommonPage.css";
 
-const JeePage = () => {
+const Jee = () => {
   return (
     <div className="common-container">
       <div className="common-content">
-        {/* Left: JEE Study Material */}
-        <div className="common-study-material" style={{ borderRadius:'15px 0 '}}>
+        {/* JEE Study Material */}
+        <div className="common-study-material">
           <StudyMaterial
             title="JEE Study Material"
             description="Details about JEE study materials, PDFs, etc."
-            target="/jee/study-material"
-            />
+          />
+          <Link to="/download/jee-study-material.pdf?title=JEE Study Material" className="download-link">
+            Go to JEE Study Material Download Page
+          </Link>
         </div>
 
-        {/* Right: JEE Test Series */}
-        <div className="common-test-series" style={{ borderRadius:'15px 0 '}}>
+        {/* JEE Test Series */}
+        <div className="common-test-series">
           <TestSeries
             title="JEE Test Series"
             description="Join the JEE test series to prepare for the exam."
-            target="/jee/test-series"
           />
+          <Link to="/download/jee-test-series.pdf?title=JEE Test Series" className="download-link">
+            Go to JEE Test Series Download Page
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default JeePage;
+export default Jee;

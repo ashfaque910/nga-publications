@@ -1,30 +1,34 @@
-// components/FoundationPage.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import StudyMaterial from "./common/StudyMaterial";
 import TestSeries from "./common/TestSeries";
-// import "./FoundationPage.css"; // Optional CSS
+import "./CommonPage.css";
 
 const Foundation = () => {
   return (
     <div className="common-container">
       <div className="common-content">
-        {/* Left: Foundation Study Material */}
-        <div className="common-study-material" style={{ borderRadius:'15px 0 ' , paddingBottom:'24px'}}>
+        {/* Foundation Study Material */}
+        <div className="common-study-material">
           <StudyMaterial
             title="Foundation Study Material"
-            description="Details about foundation study materials, PDFs, etc."
-            target="/foundation/study-material"
-            />
+            description="Details about Foundation study materials, PDFs, etc."
+          />
+          <Link to="/download/foundation6to10(2025).pdf?title=Foundation Study Material" className="download-link">
+            Go to Foundation ('6 to 10') Download Page
+          </Link>
         </div>
 
-        {/* Right: Foundation Test Series */}
-        <div className="common-test-series" style={{ borderRadius:'15px 0 '}}>
+        {/* Foundation Test Series */}
+        {/* <div className="common-test-series">
           <TestSeries
             title="Foundation Test Series"
             description="Join the Foundation test series to prepare for the exam."
-            target="/foundation/test-series"
           />
-        </div>
+          <Link to="/download/foundation-test-series.pdf?title=Foundation Test Series" className="download-link">
+            Go to Foundation Test Series Download Page
+          </Link>
+        </div> */}
       </div>
     </div>
   );

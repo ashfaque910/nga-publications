@@ -1,35 +1,5 @@
-nav a {
-  padding: 0 10px;
-  text-decoration: none;
-  color: #2d3748;
-}
-
-/* Active link styles */
 .active {
   color: #48bb78; /* Active link color */
   font-weight: bold;
   border-bottom: 2px solid #48bb78; /* Optional underline */
 }
-  
-/*   
-  nav a:hover {
-    color: #48bb78;  Hover effect */
-  
-   
-  /* Medium screen adjustments (768px - 1024px) */
-  @media (min-width: 768px) and (max-width: 1024px) {
-   
-  
-    /* Add extra space between specific links in medium screens */
-    .navlink-neet,
-    .navlink-jee,
-    .navlink-foundation {
-      margin-right: 20px; /* Adjust this value as needed */
-    }
-  
-    /* Optional: Adjust font size for medium screens */
-    nav a {
-      font-size: 14px; /* Example for slightly smaller text in medium screens */
-    }
-  }
-  
