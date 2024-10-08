@@ -44,8 +44,8 @@ const App = () => {
         </Routes>
         {/* Adding reusable components to all pages */}
         <WhyChooseUs />
-        <Testimonials />
-        <Faqs />
+        {/* <Testimonials /> */}
+        {/* <Faqs /> */}
         <Footer />
       </div>
     </Router>

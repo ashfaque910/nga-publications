@@ -5,23 +5,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
   background-color: var(--bg-color, #f9f9f9); /* Background matches theme color */
   padding: 20px;
+  
 }
 
 /* Container for the download content */
 .download-container {
-  background: var(--secondary-color); /* Card background matches theme */
+  background: linear-gradient(to bottom, #c3e6ec49, #a7d1d9e0); /* Card background matches theme */
   border: 1px solid var(--border-color, #ddd);
   padding: 40px;
-  border-radius: var(--border-radius, 15px); /* Use the theme's border-radius */
+  border-radius: var(--border-radius); /* Use the theme's border-radius */
   text-align: center;
   box-shadow: var(--box-shadow, 0 4px 15px rgba(0, 0, 0, 0.1)); /* Theming the shadow */
   max-width: 500px; /* Ensure it’s not too wide for mobile */
   width: 100%;
+   transition: transform var(--transition-time) ease;
 }
-
+.download-container:hover{
+  transform: scale(1.02);
+  box-shadow: var(--hover-shadow);
+}
 /* Title styling matches theme */
 .download-title {
   font-size: 2rem;
@@ -40,7 +44,7 @@
 
 /* Download button that matches the theme */
 .download-button {
-  padding: 15px 30px;
+  padding: 20px 30px;
   background-color: var(--button-bg, #286982); /* Button background color matches theme */
   color: var(--button-text-color, white);
   font-size: 1rem;
@@ -53,3 +57,4 @@
 .download-button:hover {
   background-color: var(--button-hover-bg, #155ab2); /* Hover effect aligned with theme */
 }
+

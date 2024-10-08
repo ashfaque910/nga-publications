@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa'; // Using react-icons for arrow icon
+import { FaArrowRight } from 'react-icons/fa';
 
 const ClickArrow = ({ target }) => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const ClickArrow = ({ target }) => {
 
   return (
     <button onClick={handleClick} className="arrow-button">
-      <FaArrowRight size={24} /> {/* Icon for the arrow */}
+      <FaArrowRight size={24} /> {/* Arrow icon */}
     </button>
   );
 };

@@ -3,21 +3,21 @@
      padding: 0; 
     box-sizing: border-box;
 }
-body, html {
+/* body, html {
     /* margin: 0;
     padding: 0; */
-    font-family: 'Roboto', sans-serif;
+ /*   font-family: var( --font-heading);
   }
   
   a {
     text-decoration: none;
-  }
+  } */
   
   :root {
     --bg-color: #fff;
     --primary-color: #2E6982;
-    --secondary-color: #622c5440;
-    --hover-color: #155ab2;
+    --secondary-color: #12181228;
+    --hover-color: #384c6c;
     --text-color: #333;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --hover-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -25,6 +25,6 @@ body, html {
     --transition-time: 0.3s;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
-    --padding: 30px;
+    --padding: 25px;
   }
   

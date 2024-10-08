@@ -1,4 +1,6 @@
+// @iB#$d6xe7cMwFg
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -6,6 +8,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +22,37 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
+
+    const serviceId = "service_txi78pc"; // Replace with your EmailJS service ID
+    const templateId = "template_6ikpk9d"; // Replace with your EmailJS template ID
+    const publicKey = "GgmW3_k4spqph1gOu";
+
+    // Prepare email params
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setLoading(false);
+          setSuccess(true);
+          setFormData({ name: "", email: "", message: "" }); // Reset the form
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setLoading(false);
+          setError(true);
+        }
+      );
   };
 
   return (
@@ -86,9 +120,13 @@ const Contact = () => {
               <button
                 type="submit"
                 className="bg-yellow-400 hover:bg-red-400 text-white font-bold py-3 rounded-lg shadow-lg transition duration-300 w-full"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
+
+              {success && <p className="text-green-500 mt-4">Message sent successfully!</p>}
+              {error && <p className="text-red-500 mt-4">Failed to send message. Please try again later.</p>}
             </form>
           </div>
 
@@ -104,11 +142,6 @@ const Contact = () => {
               <div className="p-4 bg-gray-100 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-[#2E6982]">Head Office</h3>
                 <p className="text-gray-700">H No. 597, Govind Puri, New Delhi, Delhi 110019, India</p>
-              </div>
-              {/* Regional Office */}
-              <div className="p-4 bg-gray-100 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-[#2E6982]">Regional Office</h3>
-                <p className="text-gray-700">25th Cross Kuvempu Nagar, Hassan 573201</p>
               </div>
               {/* Contact Details */}
               <div className="p-4 bg-gray-100 rounded-lg shadow-md">

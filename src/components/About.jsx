@@ -17,7 +17,7 @@ const AboutUs = () => {
       </div>
 
       {/* Content Section with White Background */}
-      <div className="bg-white py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="bg-white py-4 sm:py-4 md:py-4 lg:py-4">
         <div className="container mx-auto text-center px-4 sm:px-6 md:px-8 lg:px-16">
           {/* Our Mission */}
           <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-[#2E6982]">
@@ -62,7 +62,7 @@ const AboutUs = () => {
 
 
           {/* Call to Action */}
-          <div className="py-8">
+          <div className="p-4">
             <p className="text-[#2E6982] text-sm sm:text-base md:text-md lg:text-xl mb-6 sm:mb-4 md:mb-8 max-w-lg sm:max-w-xl md:max-w-6xl mx-auto leading-relaxed">
               Join us in shaping the future of education. Together, we can cultivate a generation of achievers ready to conquer their goals.
             </p>
